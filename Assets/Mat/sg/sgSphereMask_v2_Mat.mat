@@ -41,8 +41,8 @@ Material:
     - Boolean_48e9e3eb37e84d0b991ea9f9b787cb28: 1
     - Boolean_9cb9161f07954156800b53db57235799: 0
     - MaskOpacity: 1
-    - MaskRadius: 8
-    - MaskThickness: 5
+    - MaskRadius: 11.92
+    - MaskThickness: 534.72
     - SmoothInside: 40
     - SmoothOutside: 40
     m_Colors:

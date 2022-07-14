@@ -26,8 +26,17 @@ public class MainCameraScript : MonoBehaviour
 		yaw += rootInput.mouseX;
 		pitch -= rootInput.mouseY;
 		transform.eulerAngles = new Vector3(pitch, yaw, 0f);
-		transform.Translate(0f,rootInput.elevation, 0f);
 
+		Vector3 camPos = transform.position;
+		transform.Translate(0f,rootInput.elevation,0f);
+		if (transform.position.y < rootInput.elevationMin){
+			camPos.y = rootInput.elevationMin;
+			transform.position=camPos;
+		}
+		if (transform.position.y > rootInput.elevationMax){
+			camPos.y = rootInput.elevationMax;
+			transform.position=camPos;
+		}
 		
 	}
 }

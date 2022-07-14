@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 81bc38e2ad2ecce46aca7f152d067266
+guid: 12e8733c545b39c49a80c2cb6498a20b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -15,7 +15,7 @@ ScriptedImporter:
     normals: 1
     tangents: 1
     cameraAspectRatio: 2
-    importVisibility: 1
+    importVisibility: 0
     scaleFactor: 1
     swapHandedness: 1
     flipFaces: 0
@@ -24,10 +24,10 @@ ScriptedImporter:
     importLinePolygon: 1
     importTrianglePolygon: 1
     importXform: 1
-    importCameras: 1
+    importCameras: 0
     importMeshes: 1
     importPoints: 0
-    importCurves: 1
+    importCurves: 0
     createCurveRenderers: 0
   abcStartTime: 0.04
   abcEndTime: 0.04
