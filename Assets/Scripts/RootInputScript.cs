@@ -5,6 +5,8 @@ using UnityEngine;
 public class RootInputScript : MonoBehaviour
 {
 
+	private float sWidth;
+	private float sHeight;
 
 	[System.NonSerialized] public float mouseX;
 	[System.NonSerialized] public float mouseY;
@@ -24,7 +26,8 @@ public class RootInputScript : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		
+		sWidth = Screen.width;
+		sHeight = Screen.height;
 	}
 
 	// Update is called once per frame
@@ -39,7 +42,7 @@ public class RootInputScript : MonoBehaviour
 			messageTxt = "Click screen to activate";
 		}
 		else {
-			messageTxt = "Arrow Up/Down - Elevator\nH - toggle this message\nG - Ground wave\nR - Road wave\nB - Building wave";
+			messageTxt = "Arrow Up/Down - Elevator\nH - toggle this message\nG - Ground wave\nR - Road wave\nB - Building wave\nCtrl-B - Buildings Stop";
 			mouseX = Input.GetAxis("Mouse X") * MouseSensitivityX * Time.deltaTime;
 			mouseY = Input.GetAxis("Mouse Y") * MouseSensitivityY * Time.deltaTime;
 			elevation = Input.GetAxis("Elevator") * ElevatorSpeed * Time.deltaTime;
@@ -65,8 +68,14 @@ public class RootInputScript : MonoBehaviour
 	
 	void OnGUI()
 	{
+		GUIStyle txtStyle = new GUIStyle(GUI.skin.label);
+		txtStyle.fontSize = (int)(sWidth/60);
+		txtStyle.normal.textColor = Color.white;
+		txtStyle.hover.textColor = Color.white;
+		float boxWidth = sWidth/2;
+		float boxHeight = sHeight/2;
 		if (showMessage == true){
-			GUI.Box(new Rect(10, 10, 200, 100), messageTxt, "label");
+			GUI.Box(new Rect(10, 10, boxWidth, boxHeight), messageTxt, txtStyle);
 		}
 	}
 

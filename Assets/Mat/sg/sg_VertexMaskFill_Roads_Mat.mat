@@ -45,6 +45,6 @@ Material:
     - Width: -0.001
     - WidthMultiplier: 2
     m_Colors:
-    - ColorA: {r: 0, g: 0.7254902, b: 0.8745099, a: 1}
+    - ColorA: {r: 0.9803922, g: 0.30980393, b: 0.003921569, a: 1}
     - ColorB: {r: 0, g: 0.1960784, b: 0.3215686, a: 1}
   m_BuildTextureStacks: []
